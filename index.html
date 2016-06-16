@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO Chat Example</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <!--<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>-->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+  <ul class="pages">
+    <li class>
+      <div class="fpage">
+        <div class="logo">
+          <h3>MT LABS</h3>
+        </div>
+      </div>
+      <div class="form">
+          <div class="entrada">
+            <h3 class="title">Mind Traveler</h3>
+            <input id="nombre" class="traveler" type="text" maxlength="14" />   
+          </div>  
+      </div>
+      <div class="bienvenido">
+        <h3>Bienvenido Viajero</h3>
+        <div class="viajnom"></div>
+    </div>
+    
+      
+    </li>
+
+    
+   <!-- <li class="login page">
+      <div class="form">
+        <h3 class="title">Quien eres?</h3>
+        <input class="usernameInput" type="text" maxlength="14" />
+      </div>
+    </li>-->
+  </ul>
+ <!-- <script type="text/javascript">
+    $(document).ready(function(){
+        $("#nombre").keyup(function(){
+            alert($(this).val());
+        });
+    })
+</script>-->
+<script type="text/javascript">
+  var i=0;
+  
+  $('#nombre').keyup(function(e){
+    var code = e.which;
+   var name = [];
+    name[i] = code;
+   console.log(name[i]);
+    //if(code==13) e.preventDefault();
+    if(code==32 || code==13 || code==188 || code==186){
+      $('.form').hide('slow');
+      $('.bienvenido').fadeIn('slow');
+      $('.viajnom').html($(this).val());
+    }
+    i++;
+  });
+  
+</script>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="D:/cosas/sala/script.js"></script>
+</body>
+</html>
