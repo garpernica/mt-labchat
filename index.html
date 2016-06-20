@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Socket.IO Chat Example</title>
-  <link rel="stylesheet" type="text/css" href="./stylesheet.css" />
-  <!--<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>-->
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+   <!-- <script type="text/javascript" src="../script.js"></script> -->
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
 
 </head>
 <body>
@@ -74,7 +75,30 @@
 </script>
    
   <script src="/socket.io/socket.io.js"></script>
-  <script type="text/javascript" src="D:/cosas/sala/script.js"></script>
+<!--    <script type="text/javascript" src="D:/cosas/sala/script.js"></script> -->
+<script type="text/javascript">
+var $bienvenido = $('.bienvenido');
+var $traveler = $('.traveler');
+var username = $("#nombre").val();
+
+console.log(username);
+
+
+$('.form').hide();
+$('#twoform').hide();
+$('.bienvenido').hide();
+$(".logo").click(function(){
+   $(".logo").hide('slow');
+        $(".form").fadeIn('fast');
+ });
+
+$('#proceder').click(function(){
+  $('.bienvenido').hide();
+  $('#twoform').fadeIn('slow');
+
+});
+
+</script>
   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
   <script>
     var socket = io();
