@@ -2,14 +2,25 @@
   "name": "socket.io-chat",
   "version": "0.0.0",
   "description": "A simple chat client for MT lab",
-  "main": "index.html",
-  "author": "Oscar",
+  "main": "server.js",
+  "scripts":{
+    "start":"node server.js"
+  },
   "dependencies": {
     "express": "4.13.4"
   },
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/garpernica/mt-labchat"
+  },
+  "keywords":{
+    "node",
+    "heroku",
+    "express"
+  },
    "engines": {
-    "node": "0.10.34",
-    "npm": "1.4.28"
+    "node": "4.4.6",
+    "npm": "2.15.5"
   }
 }
   
